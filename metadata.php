@@ -18,21 +18,21 @@ foreach(\OxidEsales\Eshop\Core\Registry::getLang()->getActiveShopLanguageIds() a
 	$articleDetailsOptions[] =
 		array('group' => 'gw_oxid_seo_article_detail', 'name' => 'gw_oxid_seo_article_details_seo_title_'.$lang, 'type' => 'aarr', 'value' =>
 			[
-				"SCH" => "[attributeModelname] [attributemodeltype] [attributeColor] [attributeMaterial]",
+				"SCH" => "[attributeModelname] [attributeModeltype] [attributeColor] [attributeMaterial]",
 				"default" => "[titlePrefix] [title] [titleSuffix] [titlePageSuffix]",
 			]
 		);
 	$articleDetailsOptions[] =
 		array('group' => 'gw_oxid_seo_article_detail', 'name' => 'gw_oxid_seo_article_details_seo_h1_'.$lang, 'type' => 'aarr', 'value' =>
 			[
-				"SCH" => "[attributemodeltype] [attributeColor] [attributeMaterial]",
+				"SCH" => "[attributeModeltype] [attributeColor] [attributeMaterial]",
 				"default" => "[attributeColor] [attributeMaterial]",
 			]
 		);
 	$articleDetailsOptions[] =
 		array('group' => 'gw_oxid_seo_article_detail', 'name' => 'gw_oxid_seo_article_details_seo_description_'.$lang, 'type' => 'aarr', 'value' =>
 			[
-				"SCH" => "[attributeModelname] [attributemodeltype] in [attributeColor] aus [attributeMaterial]",
+				"SCH" => "[attributeModelname] [attributeModeltype] in [attributeColor] aus [attributeMaterial]",
 				"default" => "[attributeModelname] in [attributeColor] aus [attributeMaterial]",
 			]
 		);
