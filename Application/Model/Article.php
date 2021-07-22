@@ -44,12 +44,21 @@ class Article extends Article_parent {
 				$variantSelectionValue = $variantSelectionId ? ' ' . $variantSelectionId : '';
 				$title = $articleTitle . $variantSelectionValue;
 			}
+		} else {
+			$articleTitle = $this->oxarticles__oxtitle->value;
+			$variantSelectionId = $this->oxarticles__oxvarselect->value;
+			$variantSelectionValue = $variantSelectionId ? ' ' . $variantSelectionId : '';
+			$title = $articleTitle . $variantSelectionValue;
 		}
 		$titleSchema = str_ireplace("[attributeModelname]", $title, $titleSchema);
 
 		// replace [attributeModeltype]
 		if(method_exists($this, "getAttributesByIdent")) {
+			$modelname = trim($this->getAttributesByIdent('modelname', " "));
 			$modeltype = $this->getAttributesByIdent('modeltype', " ");
+			if($modelname == $modeltype) {
+				$modeltype = "";
+			}
 			$titleSchema = str_ireplace(
 				"[attributeModeltype]",
 				$modeltype,
