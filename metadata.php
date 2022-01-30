@@ -10,7 +10,7 @@
 /**
  * Metadata version
  */
-$sMetadataVersion = '2'; // see https://docs.oxid-esales.com/developer/en/6.0/modules/skeleton/metadataphp/version20.html
+$sMetadataVersion = '2.0'; // see https://docs.oxid-esales.com/developer/en/6.0/modules/skeleton/metadataphp/version20.html
 
 $articleDetailsOptions = array();
 foreach(\OxidEsales\Eshop\Core\Registry::getLang()->getActiveShopLanguageIds() as $lang) {
@@ -133,8 +133,6 @@ $aModule = array(
 			),
 		)
 	),
-	'files'			=> array(
-    ),
 	'blocks' => array(
 		// frontend
 
